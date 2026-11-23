@@ -1,12 +1,12 @@
 # Hand Cricket
 
-A free team game for 2 to 12 players. Everyone plays from their own phone with a room code. No packages and no accounts for players.
+A free team cricket game for 2 to 24 players. One person hosts on a laptop or TV, everyone else plays from their own phone with a room code. No packages and no accounts for players. Sounds, animations and confetti all run in the browser, so the server stays light.
 
 ## Put it online with Render (free)
 
-Use a NEW GitHub repository for this game, so it does not mix with Bluff Party.
+Use a NEW GitHub repository for this game.
 
-1. On github.com create a new public repository, for example `hand-cricket`.
+1. On github.com create a new repository, for example `hand-cricket`.
 2. Upload `hand-cricket.js`, `package.json` and `README.md` (Add file, then Upload files, then Commit changes).
 3. On render.com choose New, then Web Service, and pick the repository.
 4. Language: `Node`. Build Command: `npm install`. Start Command: `npm start`. Instance type: Free.
@@ -14,21 +14,21 @@ Use a NEW GitHub repository for this game, so it does not mix with Bluff Party.
 
 ## Play
 
-- Optional big screen: open `YOUR-ADDRESS/host`. It shows the room code and the live scoreboard.
-- Everyone else opens `YOUR-ADDRESS` on their phone, types the room code and a name, then taps Team A or Team B.
-- The first player to join a team is its captain.
-- The first person to join the room (or the big screen) taps Start match and picks the overs.
+- Host: open `YOUR-ADDRESS/host` (or tap Host a game). You see the room code, the settings and the player list.
+- Players: open `YOUR-ADDRESS` on their phones, type the room code and a name, then pick a team.
+- Host settings (before the start): single match or tournament (3 to 6 teams), overs, seconds per ball, powerplay (off, or the first 1 to 3 overs, with runs x2 or x3), super over on a tie, and team names. Captains can rename their own team. The host can also lock the room, move or remove players, pick captains and close the room.
+- Tournament (IPL style): everyone plays everyone once (win 2 points, tie 1, net run rate breaks ties). The top two meet in the final, and the winner gets the trophy screen with Orange Cap, Purple Cap and most valuable player.
+- A tie goes to a super over (one over each, 2 wickets, up to 3 times).
+- The number buttons are shuffled on every ball for every player, so nobody can read a pick from finger movement.
+- The Stats tab keeps each player's totals for the whole room. After each match you get a scorecard, charts and Player of the Match.
+- The speaker button turns sounds on or off. The microphone button turns spoken commentary on or off (on for the host screen by default).
 
-## Rules
+## Rules in short
 
-1. Toss: one captain is picked at random to call odd or even. Both captains then have 5 seconds to pick a number from 0 to 10. If the total matches the call, the calling team wins the toss, otherwise the other team wins. The toss winner bats first.
-2. Lineups: the batting captain sets the batting order and the bowling captain sets the bowling order. Orders left unset when the 60 seconds end use join order.
-3. Each ball: the batter and the bowler each have 5 seconds to tap a number from 0 to 10. No pick counts as 0.
-   - Same number: the batter is OUT.
-   - Different numbers: the batter's number is added to the team score.
-   - Batter plays 0 and bowler plays a number above 0: the bowler's number is added to the score.
-4. An over is 6 balls, and each over is bowled by the next bowler in the bowling order.
-5. An innings ends when the overs are finished or every batter is out.
-6. The second team chases the target (first team's score plus 1). A tie is possible.
+1. Toss: one captain calls odd or even, both captains pick 0 to 10, the total decides the toss winner, who chooses to bat or bowl.
+2. Captains set the batting and bowling order.
+3. Each ball: batter and bowler pick 0 to 10 in time (no pick = 0). Same number is OUT. Otherwise the batter's number is added; if the batter plays 0 and the bowler plays more, the bowler's number is added. Powerplay overs multiply the runs.
+4. A batter out without scoring gets a duck (golden duck on the first ball).
+5. The second team chases the target (first score plus 1).
 
-Free hosting can go to sleep after 15 minutes without use and takes about a minute to wake up. Open the address a minute or two before the game.
+Free hosting sleeps after 15 minutes without use and takes about a minute to wake up. Open the address a minute or two before the game.
